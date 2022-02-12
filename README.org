@@ -24,4 +24,7 @@ Fluxbox setup I have something like this to adjust the screen brightness:
   # ~/.fluxbox/keys
   XF86MonBrightnessDown :Exec /home/rcosme/macbl.rb screen -100
   XF86MonBrightnessUp :Exec /home/rcosme/macbl.rb screen +100
+
+  XF86KbdBrightnessDown :Exec /home/rcosme/macbl/macbl.rb keyboard -10
+  XF86KbdBrightnessUp :Exec /home/rcosme/macbl/macbl.rb keyboard +10
 #+END_SRC
