@@ -7,7 +7,7 @@ KEYBOARD_PREFIX = "/sys/class/leds/smc::kbd_backlight/"
 if ARGV.size != 2 ||
    (ARGV[0] != "screen" && ARGV[0] != "keyboard") || # action
    (ARGV[1][0] != '+' && ARGV[1][0] != '-') # delta value to adjust brightness level
-  puts """usage: macbl.rb [screen|keyboard| [+,-]<number>
+  puts """usage: macbl.rb [screen|keyboard] [+,-]<number>
 
   examples: 
     macbl.rb screen -500 #decrease screen's brightness at 500 units

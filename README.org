@@ -3,7 +3,7 @@ Utility to adjust the brightness of the screen or keyboard of a macbook running 
 
 ** Usage
 #+BEGIN_SRC shell
-  $ sudo ruby macbl.rb [screen|keyboard| [+,-]<number>
+  $ sudo ruby macbl.rb [screen|keyboard] [+,-]<number>
 #+END_SRC
 
 ** Demo
