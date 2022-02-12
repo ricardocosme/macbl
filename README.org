@@ -1,0 +1,27 @@
+* macbl
+Utility to adjust the brightness of the screen or keyboard of a macbook running Linux. Tested on a MacBook Air Mid 2013 13" running Arch Linux.
+
+** Usage
+#+BEGIN_SRC shell
+  $ sudo ruby macbl.rb [screen|keyboard| [+,-]<number>
+#+END_SRC
+
+** Demo
+#+BEGIN_SRC shell
+  $ sudo ruby macbl.rb screen +500
+  adjusting brightness from 677 to 1177 [max:2777]
+
+  $ sudo ruby macbl.rb screen -100
+  adjusting brightness from 1177 to 1077 [max:2777]
+
+  $ sudo ruby macbl.rb keyboard +100
+  adjusting brightness from 0 to 100 [max:255]
+#+END_SRC
+
+Personally I like to use this as a command to be executed when the brightness keys are pressed. In my 
+Fluxbox setup I have something like this to adjust the screen brightness:
+#+BEGIN_SRC
+  # ~/.fluxbox/keys
+  XF86MonBrightnessDown :Exec /home/rcosme/macbl.rb screen -100
+  XF86MonBrightnessUp :Exec /home/rcosme/macbl.rb screen +100
+#+END_SRC
