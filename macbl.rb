@@ -22,7 +22,7 @@ end
 
 target = ARGV[0] # screen or keyboard
 action = ARGV[1][0] # + or -
-amount = ARGV[1][1..-1].to_i # numeric value
+amount = ARGV[1].to_i # numeric value
 
 filenames = ["max_brightness", "brightness"].map { |filename|
   eval("#{target.upcase}_PREFIX") + filename }
@@ -31,7 +31,7 @@ max_filename, actual_filename = filenames
 max, actual = filenames.map { |filename| File.read(filename).to_i }
 
 File.open(actual_filename, "w") { |fh|
-  new_brightness = actual + (action == '+' ? amount : -amount)
+  new_brightness = actual + amount
   
   # the new value must be between [0, max]
   new_brightness = [0, [new_brightness, max].min].max
