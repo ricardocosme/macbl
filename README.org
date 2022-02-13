@@ -19,7 +19,7 @@ Utility to adjust the brightness of the screen or keyboard of a macbook running 
 #+END_SRC
 
 Personally I like to use this as a command to be executed when the brightness keys are pressed. In my 
-Fluxbox setup I have something like this to adjust the screen brightness:
+Fluxbox setup I have something like this:
 #+BEGIN_SRC
   # ~/.fluxbox/keys
   XF86MonBrightnessDown :Exec /home/rcosme/macbl.rb screen -100
