@@ -21,7 +21,6 @@ if ARGV.size != 2 ||
 end
 
 target = ARGV[0] # screen or keyboard
-action = ARGV[1][0] # + or -
 amount = ARGV[1].to_i # numeric value
 
 filenames = ["max_brightness", "brightness"].map { |filename|
