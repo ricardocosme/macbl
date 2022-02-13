@@ -28,8 +28,7 @@ filenames = ["max_brightness", "brightness"].map { |filename|
   eval("#{target.upcase}_PREFIX") + filename }
 max_filename, actual_filename = filenames
 
-max, actual = filenames.map { |filename|
-  File.open(filename){ |fh| fh.gets.to_i } }
+max, actual = filenames.map { |filename| File.read(filename).to_i }
 
 File.open(actual_filename, "w") { |fh|
   new_brightness = actual + (action == '+' ? amount : -amount)
